@@ -14,13 +14,17 @@ self.addEventListener("install", (e) => {
 });
 
 self.addEventListener("fetch", (e) => {
+    let nres_ = undefined;
+    
     e.respondWith(caches.match(e.request).then((cres) => {
         const netfetch = fetch(e.request).then((nres) => {
             caches.open(cacheName).then((cache) => {
                 cache.put(e.request, nres.clone());
             });
+            
+            nres_ = nres;
         });
         
-        return cres | nres;
+        return cres | nres_;
     }));
 });
