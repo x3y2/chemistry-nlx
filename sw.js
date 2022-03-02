@@ -14,8 +14,13 @@ self.addEventListener("install", (e) => {
 });
 
 self.addEventListener("fetch", (e) => {
-    e.respondWith(caches.match(e.request).then((r) => {
-        console.log(r);
-        return r;
+    e.respondWith(caches.match(e.request).then((cres) => {
+        const netfetch = fetch(e.request).then((nres) => {
+            caches.open(cacheName).then((cache) => {
+                cache.put(e.request, nres.clone());
+            });
+        });
+        
+        return cres | netfetch;
     }));
 });
