@@ -1,0 +1,78 @@
+body {
+    background: rgb(40, 40, 40);
+    color: rgb(255, 255, 255);
+    font-family: Roboto, sans-serif;
+    margin: 0px;
+}
+
+.inputs {
+    background: rgb(30, 30, 30);
+    padding: 10px;
+    box-shadow: 0px 3px 5px -1px rgba(0, 0, 0, 0.75);
+    z-index: 100;
+    text-align: center;
+}
+
+#input {
+    background: rgb(55, 55, 55);
+    color: rgb(255, 255, 255);
+    font-size: 20px;
+    border: none;
+    padding: 10px;
+    outline: none;
+}
+
+#input-type {
+    background: rgb(55, 55, 55);
+    color: rgb(255, 255, 255);
+    font-size: 20px;
+    border: none;
+    padding: 10px;
+    margin-left: 10px;
+}
+
+.output {
+    padding: 20px 10px 10px 10px;
+}
+
+.property {
+    display: flex;
+    align-items: center;
+}
+
+.property .name {
+    font-size: 30px;
+    padding: 15px 10px 10px 10px;
+    width: 25%;
+}
+
+.property .value {
+    background: rgb(30, 30, 30);
+    padding: 10px;
+    width: 100%;
+}
+
+.property .nlx-values {
+    width: 100%;
+}
+
+.property .nlx-value {
+    background: rgb(30, 30, 30);
+    padding: 9.5px;
+    padding-top: 10px;
+    padding-bottom: 7px;
+    border-bottom: 3px solid rgb(30, 30, 30);
+    text-align: left;
+}
+
+.property .nlx-value.L1 {
+    border-bottom-color: rgb(100, 100, 200);
+}
+
+.property .nlx-value.L2 {
+    border-bottom-color: rgb(100, 200, 100);
+}
+
+.property .nlx-value.L3 {
+    border-bottom-color: rgb(200, 100, 100);
+}

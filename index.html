@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Chemistry - nlx </title>
+
+    <link rel="manifest" href="./manifest.json">
+    <link rel="icon" type="image/png" href="./icon.png">
+    <link rel="stylesheet" href="./index.css">
+</head>
+<body>
+
+    <div class="inputs">
+        <input type="text" id="input">
+        <select id="input-type">
+            <option value="Z"> Z </option>
+            <option value="nlx"> nlx </option>
+        </select>
+    </div>
+
+    <div class="output">
+        <div class="property">
+            <span class="name"> Z </span>
+            <span class="value" id="Z-value"> ??? </span>
+        </div>
+
+        <div class="property">
+            <span class="name"> nlx </span>
+            <span class="nlx-values" id="nlx-value"> ??? </span>
+        </div>
+
+        <div class="property">
+            <span class="name"> g </span>
+            <span class="value" id="g-value"> ??? </span>
+        </div>
+
+        <div class="property">
+            <span class="name"> p </span>
+            <span class="value" id="p-value"> ??? </span>
+        </div>
+
+        <div class="property">
+            <span class="name"> tipo </span>
+            <span class="value" id="type-value"> ??? </span>
+        </div>
+
+        <div class="property">
+            <span class="name"> ox </span>
+            <span class="value" id="ox-value"> ??? </span>
+        </div>
+    </div>
+
+    <script src="./index.js"></script>
+    <script>
+        if ('serviceWorker' in navigator) {
+            navigator.serviceWorker.register("./sw.js");
+        }
+    </script>
+</body>
+</html>

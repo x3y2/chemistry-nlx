@@ -1,0 +1,18 @@
+{
+    "name": "Chemistry - nlx",
+    "short_name": "Chemistry - nlx",
+
+    "start_url": "/",
+    "background_color": "rgb(40, 40, 40)",
+    "display": "standalone",
+    "scope": "/",
+    "theme_color": "rgb(30, 30, 30)",
+
+    "icons": [
+        {
+            "src": "./icon.png",
+            "type": "image/png",
+            "sizes": "512x512"
+        }
+    ]
+}
