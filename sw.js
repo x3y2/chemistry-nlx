@@ -1,9 +1,8 @@
 const cacheName = "assets";
 const assets = [
-    "/",
-    "index.html",
-    "index.js",
-    "index.css",
+    "./index.html",
+    "./index.js",
+    "./index.css",
 ];
 
 self.addEventListener("install", (e) => {
