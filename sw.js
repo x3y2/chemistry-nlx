@@ -3,6 +3,8 @@ const assets = [
     "./index.html",
     "./index.js",
     "./index.css",
+    "./manifest.json",
+    "./icon.png"
 ];
 
 self.addEventListener("install", (e) => {
@@ -13,16 +15,16 @@ self.addEventListener("install", (e) => {
     );
 });
 
-self.addEventListener("fetch", event => {
-   event.respondWith(
-     caches.match(event.request).then(cachedResponse => {
-         const networkFetch = fetch(event.request).then(response => {
-           caches.open(cacheName).then(cache => {
-               cache.put(event.request, response.clone());
+self.addEventListener("fetch", (e) => {
+   e.respondWith(
+     caches.match(e.request).then((cachedResponse) => {
+         const netFetch = fetch(e.request).then((netResponse) => {
+           caches.open(cacheName).then((cache) => {
+               cache.put(e.request, netResponse.clone());
            });
          });
          
-         return cachedResponse || networkFetch;
+         return cachedResponse || netFetch;
      }
    )
   )
