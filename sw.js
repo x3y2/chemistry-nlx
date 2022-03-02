@@ -21,6 +21,6 @@ self.addEventListener("fetch", (e) => {
             });
         });
         
-        return cres | netfetch;
+        return cres | nres;
     }));
 });
