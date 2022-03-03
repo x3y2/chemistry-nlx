@@ -151,9 +151,9 @@ function nlx2ox(nlx) {
     let type = nlx2type(nlx);
 
     if (type == "metal") {
-        return g;
+        return g + "+";
     }else {
-        return 8 - g;
+        return (8 - g) + "-";
     }
 }
 
@@ -178,7 +178,7 @@ function resetOutput() {
     EL_OX.innerHTML = "???";
 }
 
-EL_INPUT.addEventListener("keyup", () => {
+update = (e) => {
     if (EL_INPUT_TYPE.value == "Z") {
         var Z = parseInt(EL_INPUT.value);
 
@@ -220,4 +220,7 @@ EL_INPUT.addEventListener("keyup", () => {
     EL_P.innerHTML = p;
     EL_TYPE.innerHTML = type;
     EL_OX.innerHTML = ox;
-});
+}
+
+EL_INPUT.addEventListener("keyup", update);
+EL_INPUT_TYPE.addEventListener("change", update);
