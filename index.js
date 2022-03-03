@@ -178,7 +178,7 @@ function resetOutput() {
     EL_OX.innerHTML = "???";
 }
 
-update = (e) => {
+const update = (e) => {
     if (EL_INPUT_TYPE.value == "Z") {
         var Z = parseInt(EL_INPUT.value);
 
