@@ -2,7 +2,7 @@
     "name": "Chemistry - nlx",
     "short_name": "Chemistry - nlx",
 
-    "start_url": "/",
+    "start_url": "https://x3y2.github.io/chemistry-nlx/",
     "background_color": "rgb(40, 40, 40)",
     "display": "standalone",
     "theme_color": "rgb(30, 30, 30)",
